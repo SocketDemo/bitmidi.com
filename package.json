@@ -31,6 +31,7 @@
   "dependencies": {
     "@babel/core": "^7.0.0-beta.31",
     "@babel/register": "^7.0.0-beta.31",
+    "@std/esm": "^0.13.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -102,12 +103,12 @@
     "secret-download": "rsync -a -O -v --delete -e \"ssh -p 44444\" feross@future:\"/home/feross/www/nodefoo.com/secret/\" secret/",
     "secret-upload": "rsync -a -O -v --delete -e \"ssh -p 44444\" secret/ feross@future:\"/home/feross/www/nodefoo.com/secret/\"",
     "size": "npm run build-js && cat static/bundle.js | gzip | wc -c",
-    "start": "node --experimental-modules src/server/start.mjs",
-    "test": "npm run build && standard '**/*.js' '**/*.mjs' && node --experimental-modules test/index.mjs",
+    "start": "node -r @std/esm src/server/start.mjs",
+    "test": "npm run build && standard '**/*.js' '**/*.mjs' && node -r @std/esm test/index.mjs",
     "watch": "npm run watch-css & npm run watch-js & npm run watch-server",
     "watch-css": "DEBUG=true nodemon -x 'npm run build-css' -w src/server -e css",
     "watch-js": "DEBUG=true rollup -c --watch",
-    "watch-server": "DEBUG=nodefoo* DEBUG_DEPTH=1 nodemon -x 'node --experimental-modules' src/server/start.mjs -e js,json,ejs -i src/browser -i src/views -i static/ -i tmp/"
+    "watch-server": "DEBUG=nodefoo* DEBUG_DEPTH=1 nodemon -x 'node -r @std/esm' src/server/start.mjs -e js,json,ejs -i src/browser -i src/views -i static/ -i tmp/"
   },
   "standard": {
     "parser": "babel-eslint",

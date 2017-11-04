@@ -3,6 +3,7 @@ secret/*
 
 tmp/
 node_modules/
+.esm-cache/
 
 static/bundle.js
 static/bundle.css
