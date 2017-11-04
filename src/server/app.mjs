@@ -1,23 +1,19 @@
-module.exports = {
-  init
-}
+import compress from 'compression'
+import crypto from 'crypto'
+import express from 'express'
+import fs from 'fs'
+import path from 'path'
+import session from 'express-session'
 
-const compress = require('compression')
-const crypto = require('crypto')
-const express = require('express')
-const fs = require('fs')
-const path = require('path')
-const session = require('express-session')
+import config from '../../config'
+import createRenderer from '../lib/preact-dom-renderer'
+import createStore from '../store'
+import getProvider from '../views/provider'
+import routerApi from './router-api'
+import routerLogin from './router-login'
+import secret from '../../secret'
 
-const config = require('../../config')
-const createRenderer = require('../lib/preact-dom-renderer')
-const createStore = require('../store')
-const getProvider = require('../views/provider')
-const routerApi = require('./router-api')
-const routerLogin = require('./router-login')
-const secret = require('../../secret')
-
-function init (sessionStore) {
+export function init (sessionStore) {
   const app = express()
 
   // Set up templating

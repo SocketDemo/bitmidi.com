@@ -1,14 +1,14 @@
-const { h } = require('preact') /** @jsx h */
+import { h } from 'preact' /** @jsx h */
 
-const Button = require('./button')
-const CodeEditor = require('./code-editor')
-const Heading = require('./heading')
-const Input = require('./input')
-const Loader = require('./loader')
-const PageComponent = require('./page-component')
-const { oneLine } = require('common-tags')
+import Button from './button'
+import CodeEditor from './code-editor'
+import Heading from './heading'
+import Input from './input'
+import Loader from './loader'
+import PageComponent from './page-component'
+import { oneLine } from 'common-tags'
 
-class SubmitPage extends PageComponent {
+export default class SubmitPage extends PageComponent {
   constructor () {
     super()
     this.state = {
@@ -89,5 +89,3 @@ class SubmitPage extends PageComponent {
     })
   }
 }
-
-module.exports = SubmitPage
