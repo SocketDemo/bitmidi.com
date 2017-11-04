@@ -23,7 +23,7 @@ import path from 'path'
 import session from 'express-session'
 import unlimited from 'unlimited'
 
-import app from './app'
+import appInit from './app'
 
 const server = http.createServer()
 
@@ -41,7 +41,7 @@ function init (port = config.port, cb = (err) => { if (err) throw err }) {
     const SQLiteStore = ConnectSQLite(session)
     const sessionStore = new SQLiteStore({ dir: path.join(config.rootPath, 'db') })
 
-    server.on('request', app.init(sessionStore))
+    server.on('request', appInit(sessionStore))
 
     cb(null)
   })
