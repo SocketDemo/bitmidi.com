@@ -3,7 +3,7 @@ const c = require('classnames')
 
 const config = require('../../config')
 
-const Button = require('./button')
+const Button = require('preact-material-components/Button')
 const Image = require('./image')
 const Link = require('./link')
 const Search = require('./search')
@@ -17,11 +17,8 @@ const Header = (props, context) => {
     $submitButton = (
       <Button
         class='mh1'
-        color={mainColor}
-        fill
         href='/submit'
-        pill
-        size='medium'
+        unelevated
       >
         Add a snippet ✨
       </Button>

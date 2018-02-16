@@ -20,12 +20,16 @@ const css = [
   './node_modules/highlight.js/styles/monokai-sublime.css',
   './node_modules/codemirror/lib/codemirror.css',
   './node_modules/codemirror/theme/monokai.css',
+  './node_modules/preact-material-components/style.css',
   './src/server/index.css'
 ]
 
 const whitelist = [
   // Highlight.js
   '*hljs*',
+
+  // Material Design Components
+  '*mdc*',
 
   // CodeMirror
   'CodeMirror',
