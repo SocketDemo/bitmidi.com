@@ -119,7 +119,8 @@ export default function init () {
       ;
       connect-src
         'self'
-        http://www.midijs.net
+        https://raw.githubusercontent.com
+        https://gleitz.github.io
       ;
       img-src
         'self'
