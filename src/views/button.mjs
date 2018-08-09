@@ -2,6 +2,7 @@ import { h } from 'preact' /** @jsx h */
 import c from 'classnames'
 
 import Link from './link'
+import PButton from 'preact-material-components/Button'
 
 const Button = (props, context) => {
   const {
@@ -17,6 +18,8 @@ const Button = (props, context) => {
     style = {},
     ...rest
   } = props
+
+  return <PButton outlined dense>{children}</PButton>
 
   const cls = ['pointer dib ttu fw6 v-mid ba bw1 sans-serif grow']
 

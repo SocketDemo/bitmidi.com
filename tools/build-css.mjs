@@ -19,11 +19,13 @@ rimraf.sync(outputPath)
 
 const content = [
   './src/views/*.mjs',
-  './src/server/*.ejs'
+  './src/server/*.ejs',
+  './node_modules/preact-material-components/**/*.jsx'
 ]
 
 const css = [
   './node_modules/tachyons/css/tachyons.min.css',
+  './node_modules/preact-material-components/style.css',
   './src/server/index.css'
 ]
 
