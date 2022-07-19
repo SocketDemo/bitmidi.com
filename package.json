@@ -13,6 +13,11 @@
     "babel": false,
     "compileEnhancements": false
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "babel": {
     "plugins": [
       "@babel/plugin-transform-modules-commonjs",
@@ -67,6 +72,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/plugin-transform-react-jsx": "^7.12.7",
     "@babel/register": "^7.12.1",
+    "browserlist": "^1.0.1",
     "classnames": "^2.2.6",
     "color-scheme-change": "^1.0.1",
     "common-tags": "^1.8.0",
