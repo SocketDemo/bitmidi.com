@@ -6,10 +6,14 @@ import dragDrop from 'drag-drop'
 import fileToArrayBuffer from 'file-to-array-buffer'
 import unmuteIosAudio from 'unmute-ios-audio'
 import colorSchemeChange from 'color-scheme-change'
+import { NativeEventSource, EventSourcePolyfill } from 'event-source-polyfill'
 
 import createStore from '../store'
 import debug from '../lib/debug-helper'
 import getProvider from '../views/provider'
+
+// Set as global property
+global.EventSource = NativeEventSource || EventSourcePolyfill
 
 const root = document.getElementById('root')
 const { store, dispatch } = createStore(update)
