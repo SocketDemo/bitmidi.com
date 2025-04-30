@@ -87,6 +87,7 @@
     "image-size": "^0.9.3",
     "imagemin-gm": "^2.0.2",
     "imagemin-webp": "^6.0.0",
+    "is-buffer": "^1.0.0",
     "jsonfeed-to-atom": "^1.2.2",
     "knex": "^0.21.12",
     "load-script2": "^2.0.6",
