@@ -1,4 +1,6 @@
 
+import Calendar from 'angular-calendar'
+
 import { siteName } from '../config'
 import { doMidiAll } from '../actions/midi'
 
@@ -27,6 +29,12 @@ export default class AboutPage extends Page {
       <div>
         <Heading>About {siteName}</Heading>
         <p>Serving {views.all.total.toLocaleString()} MIDI files curated by volunteers around the world.</p>
+
+        <Heading>
+          How to book time with us for consultation
+        </Heading>
+
+        <Calendar />
 
         <Heading>What is this site?</Heading>
         <p>
